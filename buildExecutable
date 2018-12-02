@@ -1,6 +1,6 @@
 cd /
-cd $HOME/Practice/jen-doc/jen-doc/
-echo "Ubuntu@123" | sudo -S docker stop helloworld
-echo "Ubuntu@123" | sudo -S docker rm helloworld
-echo "Ubuntu@123" | sudo -S docker build -t hello-world $HOME/Practice/jen-doc/jen-doc/
-docker run -d --name helloworld -p 80:86 -v $HOME/Practice/jen-doc/jen-doc/src/:/var/www/html hello-world
+cd $HOME/Practice/jen-doc/jen-doc
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world $HOME/Practice/jen-doc/jen-doc
+docker run -d --name helloworld -p 80:80 -v $HOME/Practice/jen-doc/jen-doc/src/:/var/www/html hello-world
